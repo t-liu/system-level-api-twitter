@@ -1,0 +1,1719 @@
+{
+    "statuses": [
+        {
+            "created_at": "Mon Nov 29 15:45:51 +0000 2021",
+            "id": 1465346273393852425,
+            "id_str": "1465346273393852425",
+            "text": "RT @Science37x: Our remote coordinators are available to the patient at any time, by any channel. They coordinate care with the patient’s l…",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "Science37x",
+                        "name": "Science 37",
+                        "id": 3292160206,
+                        "id_str": "3292160206",
+                        "indices": [
+                            3,
+                            14
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 41363089,
+                "id_str": "41363089",
+                "name": "Christopher Ceppi",
+                "screen_name": "ChrisCeppi",
+                "location": "California",
+                "description": "Chief Technology Officer @Science37x Nasdaq:SNCE",
+                "url": "https://t.co/7WLcaWg0Cn",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/7WLcaWg0Cn",
+                                "expanded_url": "http://www.science37.com",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 558,
+                "friends_count": 694,
+                "listed_count": 0,
+                "created_at": "Wed May 20 13:58:46 +0000 2009",
+                "favourites_count": 646,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 1333,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/839899806432542720/HseR9Srs_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/839899806432542720/HseR9Srs_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/41363089/1487310598",
+                "profile_link_color": "ABB8C2",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 29 15:24:10 +0000 2021",
+                "id": 1465340816608665604,
+                "id_str": "1465340816608665604",
+                "text": "Our remote coordinators are available to the patient at any time, by any channel. They coordinate care with the pat… https://t.co/XMungfRtX6",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https://t.co/XMungfRtX6",
+                            "expanded_url": "https://twitter.com/i/web/status/1465340816608665604",
+                            "display_url": "twitter.com/i/web/status/1…",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 3292160206,
+                    "id_str": "3292160206",
+                    "name": "Science 37",
+                    "screen_name": "Science37x",
+                    "location": "Los Angeles, CA",
+                    "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                    "url": "https://t.co/3m8T810Y9f",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https://t.co/3m8T810Y9f",
+                                    "expanded_url": "https://www.science37.com/",
+                                    "display_url": "science37.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1947,
+                    "friends_count": 1788,
+                    "listed_count": 113,
+                    "created_at": "Wed May 20 23:36:47 +0000 2015",
+                    "favourites_count": 1608,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 5797,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                    "profile_link_color": "94D487",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "000000",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": false,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": null,
+                    "follow_request_sent": null,
+                    "notifications": null,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 3,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 29 15:24:10 +0000 2021",
+            "id": 1465340816608665604,
+            "id_str": "1465340816608665604",
+            "text": "Our remote coordinators are available to the patient at any time, by any channel. They coordinate care with the pat… https://t.co/XMungfRtX6",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/XMungfRtX6",
+                        "expanded_url": "https://twitter.com/i/web/status/1465340816608665604",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 3,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Sun Nov 28 17:36:14 +0000 2021",
+            "id": 1465011665620066311,
+            "id_str": "1465011665620066311",
+            "text": "This #nativeamericanheritagemonth, we take a look at how the COVID-19 crisis has highlighted long-standing inequiti… https://t.co/W04v2TRzon",
+            "truncated": true,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "nativeamericanheritagemonth",
+                        "indices": [
+                            5,
+                            33
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/W04v2TRzon",
+                        "expanded_url": "https://twitter.com/i/web/status/1465011665620066311",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Wed Nov 24 19:24:37 +0000 2021",
+            "id": 1463589391637655552,
+            "id_str": "1463589391637655552",
+            "text": "Read our full report on The Future of Clinical Trials, here: https://t.co/XXpbXIfFwF https://t.co/ZXchcO2Zfd",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/XXpbXIfFwF",
+                        "expanded_url": "https://lnkd.in/dVUdAFcE",
+                        "display_url": "lnkd.in/dVUdAFcE",
+                        "indices": [
+                            61,
+                            84
+                        ]
+                    }
+                ],
+                "media": [
+                    {
+                        "id": 1463589325879324676,
+                        "id_str": "1463589325879324676",
+                        "indices": [
+                            85,
+                            108
+                        ],
+                        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1463589325879324676/pu/img/aQ9UKdyT1LOT9YxV.jpg",
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1463589325879324676/pu/img/aQ9UKdyT1LOT9YxV.jpg",
+                        "url": "https://t.co/ZXchcO2Zfd",
+                        "display_url": "pic.twitter.com/ZXchcO2Zfd",
+                        "expanded_url": "https://twitter.com/Science37x/status/1463589391637655552/video/1",
+                        "type": "photo",
+                        "sizes": {
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "large": {
+                                "w": 1920,
+                                "h": 1080,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 1200,
+                                "h": 675,
+                                "resize": "fit"
+                            },
+                            "small": {
+                                "w": 680,
+                                "h": 383,
+                                "resize": "fit"
+                            }
+                        }
+                    }
+                ]
+            },
+            "extended_entities": {
+                "media": [
+                    {
+                        "id": 1463589325879324676,
+                        "id_str": "1463589325879324676",
+                        "indices": [
+                            85,
+                            108
+                        ],
+                        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1463589325879324676/pu/img/aQ9UKdyT1LOT9YxV.jpg",
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1463589325879324676/pu/img/aQ9UKdyT1LOT9YxV.jpg",
+                        "url": "https://t.co/ZXchcO2Zfd",
+                        "display_url": "pic.twitter.com/ZXchcO2Zfd",
+                        "expanded_url": "https://twitter.com/Science37x/status/1463589391637655552/video/1",
+                        "type": "video",
+                        "sizes": {
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "large": {
+                                "w": 1920,
+                                "h": 1080,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 1200,
+                                "h": 675,
+                                "resize": "fit"
+                            },
+                            "small": {
+                                "w": 680,
+                                "h": 383,
+                                "resize": "fit"
+                            }
+                        },
+                        "video_info": {
+                            "aspect_ratio": [
+                                16,
+                                9
+                            ],
+                            "duration_millis": 16335,
+                            "variants": [
+                                {
+                                    "bitrate": 2176000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1463589325879324676/pu/vid/1280x720/_1EQmyka-QIhUl-p.mp4?tag=12"
+                                },
+                                {
+                                    "bitrate": 832000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1463589325879324676/pu/vid/640x360/lo7idDvBXbgJ48R-.mp4?tag=12"
+                                },
+                                {
+                                    "bitrate": 256000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1463589325879324676/pu/vid/480x270/QzwuZpHig9MVceUF.mp4?tag=12"
+                                },
+                                {
+                                    "content_type": "application/x-mpegURL",
+                                    "url": "https://video.twimg.com/ext_tw_video/1463589325879324676/pu/pl/Rit0r9bW_Mu66mZA.m3u8?tag=12&container=fmp4"
+                                }
+                            ]
+                        },
+                        "additional_media_info": {
+                            "monetizable": false
+                        }
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": 1463589362671759360,
+            "in_reply_to_status_id_str": "1463589362671759360",
+            "in_reply_to_user_id": 3292160206,
+            "in_reply_to_user_id_str": "3292160206",
+            "in_reply_to_screen_name": "Science37x",
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Wed Nov 24 00:44:04 +0000 2021",
+            "id": 1463307395686277122,
+            "id_str": "1463307395686277122",
+            "text": "RT @Science37x: @IrmaRaste @fawalls @reachtl @JShreibati @NShahMD1 @nymedcollege @SethShayMartin @CorrieHealth @ErinMichos @HopkinsMedicine…",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "Science37x",
+                        "name": "Science 37",
+                        "id": 3292160206,
+                        "id_str": "3292160206",
+                        "indices": [
+                            3,
+                            14
+                        ]
+                    },
+                    {
+                        "screen_name": "IrmaRaste",
+                        "name": "Irma Raste #AHA21✨Influence Through Storytelling ™",
+                        "id": 20163762,
+                        "id_str": "20163762",
+                        "indices": [
+                            16,
+                            26
+                        ]
+                    },
+                    {
+                        "screen_name": "fawalls",
+                        "name": "Fran Ayalasomayajula",
+                        "id": 117813277,
+                        "id_str": "117813277",
+                        "indices": [
+                            27,
+                            35
+                        ]
+                    },
+                    {
+                        "screen_name": "reachtl",
+                        "name": "Reach",
+                        "id": 1302375077585932288,
+                        "id_str": "1302375077585932288",
+                        "indices": [
+                            36,
+                            44
+                        ]
+                    },
+                    {
+                        "screen_name": "JShreibati",
+                        "name": "Jacqueline Shreibati, MD",
+                        "id": 2513153760,
+                        "id_str": "2513153760",
+                        "indices": [
+                            45,
+                            56
+                        ]
+                    },
+                    {
+                        "screen_name": "NShahMD1",
+                        "name": "Neal Shah, MD",
+                        "id": 1007296802058657792,
+                        "id_str": "1007296802058657792",
+                        "indices": [
+                            57,
+                            66
+                        ]
+                    },
+                    {
+                        "screen_name": "nymedcollege",
+                        "name": "New York Medical College",
+                        "id": 203168280,
+                        "id_str": "203168280",
+                        "indices": [
+                            67,
+                            80
+                        ]
+                    },
+                    {
+                        "screen_name": "SethShayMartin",
+                        "name": "Seth Martin",
+                        "id": 1258578710,
+                        "id_str": "1258578710",
+                        "indices": [
+                            81,
+                            96
+                        ]
+                    },
+                    {
+                        "screen_name": "CorrieHealth",
+                        "name": "Corrie Health",
+                        "id": 892943237102669824,
+                        "id_str": "892943237102669824",
+                        "indices": [
+                            97,
+                            110
+                        ]
+                    },
+                    {
+                        "screen_name": "ErinMichos",
+                        "name": "Erin D. Michos, M.D.",
+                        "id": 2934375069,
+                        "id_str": "2934375069",
+                        "indices": [
+                            111,
+                            122
+                        ]
+                    },
+                    {
+                        "screen_name": "HopkinsMedicine",
+                        "name": "Johns Hopkins Medicine",
+                        "id": 20272531,
+                        "id_str": "20272531",
+                        "indices": [
+                            123,
+                            139
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 2513153760,
+                "id_str": "2513153760",
+                "name": "Jacqueline Shreibati, MD",
+                "screen_name": "JShreibati",
+                "location": "Menlo Park, CA",
+                "description": "@Google, previously @AliveCor. Cardiologist at #FQHC. Tweets are my own.",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 800,
+                "friends_count": 441,
+                "listed_count": 14,
+                "created_at": "Wed May 21 17:26:06 +0000 2014",
+                "favourites_count": 2191,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 1744,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1400560988181569536/eGneWibV_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1400560988181569536/eGneWibV_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/2513153760/1631034582",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 22 14:33:18 +0000 2021",
+                "id": 1462791302009995266,
+                "id_str": "1462791302009995266",
+                "text": "@IrmaRaste @fawalls @reachtl @JShreibati @NShahMD1 @nymedcollege @SethShayMartin @CorrieHealth @ErinMichos… https://t.co/aPKYSlL7Zs",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [
+                        {
+                            "screen_name": "IrmaRaste",
+                            "name": "Irma Raste #AHA21✨Influence Through Storytelling ™",
+                            "id": 20163762,
+                            "id_str": "20163762",
+                            "indices": [
+                                0,
+                                10
+                            ]
+                        },
+                        {
+                            "screen_name": "fawalls",
+                            "name": "Fran Ayalasomayajula",
+                            "id": 117813277,
+                            "id_str": "117813277",
+                            "indices": [
+                                11,
+                                19
+                            ]
+                        },
+                        {
+                            "screen_name": "reachtl",
+                            "name": "Reach",
+                            "id": 1302375077585932288,
+                            "id_str": "1302375077585932288",
+                            "indices": [
+                                20,
+                                28
+                            ]
+                        },
+                        {
+                            "screen_name": "JShreibati",
+                            "name": "Jacqueline Shreibati, MD",
+                            "id": 2513153760,
+                            "id_str": "2513153760",
+                            "indices": [
+                                29,
+                                40
+                            ]
+                        },
+                        {
+                            "screen_name": "NShahMD1",
+                            "name": "Neal Shah, MD",
+                            "id": 1007296802058657792,
+                            "id_str": "1007296802058657792",
+                            "indices": [
+                                41,
+                                50
+                            ]
+                        },
+                        {
+                            "screen_name": "nymedcollege",
+                            "name": "New York Medical College",
+                            "id": 203168280,
+                            "id_str": "203168280",
+                            "indices": [
+                                51,
+                                64
+                            ]
+                        },
+                        {
+                            "screen_name": "SethShayMartin",
+                            "name": "Seth Martin",
+                            "id": 1258578710,
+                            "id_str": "1258578710",
+                            "indices": [
+                                65,
+                                80
+                            ]
+                        },
+                        {
+                            "screen_name": "CorrieHealth",
+                            "name": "Corrie Health",
+                            "id": 892943237102669824,
+                            "id_str": "892943237102669824",
+                            "indices": [
+                                81,
+                                94
+                            ]
+                        },
+                        {
+                            "screen_name": "ErinMichos",
+                            "name": "Erin D. Michos, M.D.",
+                            "id": 2934375069,
+                            "id_str": "2934375069",
+                            "indices": [
+                                95,
+                                106
+                            ]
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "url": "https://t.co/aPKYSlL7Zs",
+                            "expanded_url": "https://twitter.com/i/web/status/1462791302009995266",
+                            "display_url": "twitter.com/i/web/status/1…",
+                            "indices": [
+                                108,
+                                131
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+                "in_reply_to_status_id": 1459883851170430981,
+                "in_reply_to_status_id_str": "1459883851170430981",
+                "in_reply_to_user_id": 20163762,
+                "in_reply_to_user_id_str": "20163762",
+                "in_reply_to_screen_name": "IrmaRaste",
+                "user": {
+                    "id": 3292160206,
+                    "id_str": "3292160206",
+                    "name": "Science 37",
+                    "screen_name": "Science37x",
+                    "location": "Los Angeles, CA",
+                    "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                    "url": "https://t.co/3m8T810Y9f",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https://t.co/3m8T810Y9f",
+                                    "expanded_url": "https://www.science37.com/",
+                                    "display_url": "science37.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1947,
+                    "friends_count": 1788,
+                    "listed_count": 113,
+                    "created_at": "Wed May 20 23:36:47 +0000 2015",
+                    "favourites_count": 1608,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 5797,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                    "profile_link_color": "94D487",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "000000",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": false,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": null,
+                    "follow_request_sent": null,
+                    "notifications": null,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 2,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Tue Nov 23 20:34:25 +0000 2021",
+            "id": 1463244568980295682,
+            "id_str": "1463244568980295682",
+            "text": "Our Operating System enables clinical trial participation from the comfort of home. Learn more: https://t.co/hWOjTyWDWm",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/hWOjTyWDWm",
+                        "expanded_url": "https://www.science37.com/Operating-System/Specialized-Networks",
+                        "display_url": "science37.com/Operating-Syst…",
+                        "indices": [
+                            96,
+                            119
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": 1463244567189274644,
+            "in_reply_to_status_id_str": "1463244567189274644",
+            "in_reply_to_user_id": 3292160206,
+            "in_reply_to_user_id_str": "3292160206",
+            "in_reply_to_screen_name": "Science37x",
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 22 14:35:51 +0000 2021",
+            "id": 1462791944053084161,
+            "id_str": "1462791944053084161",
+            "text": "Missed our presentation on \"The Future of Clinical Trials\"? #FOMO\nFear not! You can access our on-demand presentati… https://t.co/AG5Ta3PC0c",
+            "truncated": true,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "FOMO",
+                        "indices": [
+                            60,
+                            65
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/AG5Ta3PC0c",
+                        "expanded_url": "https://twitter.com/i/web/status/1462791944053084161",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 22 14:33:18 +0000 2021",
+            "id": 1462791302009995266,
+            "id_str": "1462791302009995266",
+            "text": "@IrmaRaste @fawalls @reachtl @JShreibati @NShahMD1 @nymedcollege @SethShayMartin @CorrieHealth @ErinMichos… https://t.co/aPKYSlL7Zs",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "IrmaRaste",
+                        "name": "Irma Raste #AHA21✨Influence Through Storytelling ™",
+                        "id": 20163762,
+                        "id_str": "20163762",
+                        "indices": [
+                            0,
+                            10
+                        ]
+                    },
+                    {
+                        "screen_name": "fawalls",
+                        "name": "Fran Ayalasomayajula",
+                        "id": 117813277,
+                        "id_str": "117813277",
+                        "indices": [
+                            11,
+                            19
+                        ]
+                    },
+                    {
+                        "screen_name": "reachtl",
+                        "name": "Reach",
+                        "id": 1302375077585932288,
+                        "id_str": "1302375077585932288",
+                        "indices": [
+                            20,
+                            28
+                        ]
+                    },
+                    {
+                        "screen_name": "JShreibati",
+                        "name": "Jacqueline Shreibati, MD",
+                        "id": 2513153760,
+                        "id_str": "2513153760",
+                        "indices": [
+                            29,
+                            40
+                        ]
+                    },
+                    {
+                        "screen_name": "NShahMD1",
+                        "name": "Neal Shah, MD",
+                        "id": 1007296802058657792,
+                        "id_str": "1007296802058657792",
+                        "indices": [
+                            41,
+                            50
+                        ]
+                    },
+                    {
+                        "screen_name": "nymedcollege",
+                        "name": "New York Medical College",
+                        "id": 203168280,
+                        "id_str": "203168280",
+                        "indices": [
+                            51,
+                            64
+                        ]
+                    },
+                    {
+                        "screen_name": "SethShayMartin",
+                        "name": "Seth Martin",
+                        "id": 1258578710,
+                        "id_str": "1258578710",
+                        "indices": [
+                            65,
+                            80
+                        ]
+                    },
+                    {
+                        "screen_name": "CorrieHealth",
+                        "name": "Corrie Health",
+                        "id": 892943237102669824,
+                        "id_str": "892943237102669824",
+                        "indices": [
+                            81,
+                            94
+                        ]
+                    },
+                    {
+                        "screen_name": "ErinMichos",
+                        "name": "Erin D. Michos, M.D.",
+                        "id": 2934375069,
+                        "id_str": "2934375069",
+                        "indices": [
+                            95,
+                            106
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https://t.co/aPKYSlL7Zs",
+                        "expanded_url": "https://twitter.com/i/web/status/1462791302009995266",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            108,
+                            131
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": 1459883851170430981,
+            "in_reply_to_status_id_str": "1459883851170430981",
+            "in_reply_to_user_id": 20163762,
+            "in_reply_to_user_id_str": "20163762",
+            "in_reply_to_screen_name": "IrmaRaste",
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 2,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 22 14:32:37 +0000 2021",
+            "id": 1462791130639179776,
+            "id_str": "1462791130639179776",
+            "text": "@GraceCordovano Patient advocacy is important (even in clinical trials). Traditional #ClinicalTrials exclude more t… https://t.co/424BVAvEtL",
+            "truncated": true,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "ClinicalTrials",
+                        "indices": [
+                            85,
+                            100
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "GraceCordovano",
+                        "name": "Enlightening Results 💉",
+                        "id": 791273134208999425,
+                        "id_str": "791273134208999425",
+                        "indices": [
+                            0,
+                            15
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https://t.co/424BVAvEtL",
+                        "expanded_url": "https://twitter.com/i/web/status/1462791130639179776",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": 1458445010349744134,
+            "in_reply_to_status_id_str": "1458445010349744134",
+            "in_reply_to_user_id": 791273134208999425,
+            "in_reply_to_user_id_str": "791273134208999425",
+            "in_reply_to_screen_name": "GraceCordovano",
+            "user": {
+                "id": 3292160206,
+                "id_str": "3292160206",
+                "name": "Science 37",
+                "screen_name": "Science37x",
+                "location": "Los Angeles, CA",
+                "description": "Our operating system accelerates clinical research by enabling universal access to patients and providers, anywhere.",
+                "url": "https://t.co/3m8T810Y9f",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/3m8T810Y9f",
+                                "expanded_url": "https://www.science37.com/",
+                                "display_url": "science37.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1947,
+                "friends_count": 1788,
+                "listed_count": 113,
+                "created_at": "Wed May 20 23:36:47 +0000 2015",
+                "favourites_count": 1608,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 5797,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288577379720470528/IoRh5WKW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/3292160206/1635951613",
+                "profile_link_color": "94D487",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 22 12:22:42 +0000 2021",
+            "id": 1462758435225747460,
+            "id_str": "1462758435225747460",
+            "text": "@sanofi  invests $270M in @OWKINscience  AI for cancer drug R&amp;D https://t.co/yYfvtZYLWT - previous Sanofi DH invest… https://t.co/sJ0Rw3aAgx",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "sanofi",
+                        "name": "Sanofi",
+                        "id": 35846368,
+                        "id_str": "35846368",
+                        "indices": [
+                            0,
+                            7
+                        ]
+                    },
+                    {
+                        "screen_name": "OWKINscience",
+                        "name": "OWKIN",
+                        "id": 776517805256704001,
+                        "id_str": "776517805256704001",
+                        "indices": [
+                            26,
+                            39
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https://t.co/yYfvtZYLWT",
+                        "expanded_url": "https://bit.ly/3xaJUZC",
+                        "display_url": "bit.ly/3xaJUZC",
+                        "indices": [
+                            68,
+                            91
+                        ]
+                    },
+                    {
+                        "url": "https://t.co/sJ0Rw3aAgx",
+                        "expanded_url": "https://twitter.com/i/web/status/1462758435225747460",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            121,
+                            144
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 35846368,
+            "in_reply_to_user_id_str": "35846368",
+            "in_reply_to_screen_name": "sanofi",
+            "user": {
+                "id": 22931286,
+                "id_str": "22931286",
+                "name": "martin kelly",
+                "screen_name": "martykelly",
+                "location": "Dublin ",
+                "description": "CEO and Founder @health_XL Dublin/Ireland - proud father - in another life would be playing northern soul records and making wine",
+                "url": "https://t.co/xTLM91B7cs",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/xTLM91B7cs",
+                                "expanded_url": "http://www.healthxl.org",
+                                "display_url": "healthxl.org",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 3662,
+                "friends_count": 325,
+                "listed_count": 297,
+                "created_at": "Thu Mar 05 15:27:06 +0000 2009",
+                "favourites_count": 8324,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 18914,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "0099B9",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme4/bg.gif",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme4/bg.gif",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1392917264249274372/Xi0I7Es0_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1392917264249274372/Xi0I7Es0_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/22931286/1444459616",
+                "profile_link_color": "0099B9",
+                "profile_sidebar_border_color": "5ED4DC",
+                "profile_sidebar_fill_color": "95E8EC",
+                "profile_text_color": "3C3940",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 1,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        }
+    ]
+}

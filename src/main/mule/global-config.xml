@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd 
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+	<configuration-properties doc:name="Common properties" doc:id="b38bd637-3635-4138-8f96-681d54362d90" file="config/common.yaml" />
+	<configuration-properties doc:name="Application properties" file="config/${env}.yaml" />
+	<http:listener-config name="twitter-api-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="${listener.http.port}" readTimeout="${listener.http.timeout}"/>
+    </http:listener-config>
+    <apikit:config name="twitterApiRouter" api="twitter-api.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus">
+    	<apikit:flow-mappings>
+			<apikit:flow-mapping resource="/tweets" action="get" content-type="application/json" flow-ref="getTweetsByKeyword" />
+			<apikit:flow-mapping resource="/hashtags" action="get" content-type="application/json" flow-ref="getHashtagsByKeyword" />
+			<apikit:flow-mapping resource="/health" action="get" content-type="application/json" flow-ref="getHealth" />
+		</apikit:flow-mappings>
+	</apikit:config>
+	<http:request-config name="twitterApiRequest" doc:name="HTTP Request configuration" responseTimeout="${request.https.responseTimeout}" basePath="${twitter.api.basepath}" doc:description="Twitter API service endpoint">
+		<http:request-connection protocol="HTTPS" host="${twitter.api.host}">
+			<reconnection>
+				<reconnect frequency="${request.https.reconnectFrequency}" count="${request.https.reconnectCount}" />
+			</reconnection>
+		</http:request-connection>
+	</http:request-config>
+	<api-gateway:autodiscovery apiId="${api.autodiscovery.id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="b32612ec-fb75-40b6-996b-46c188ed930d" flowRef="twitter-api-main" />
+</mule>

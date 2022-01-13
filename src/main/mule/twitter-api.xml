@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" 
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" 
+	xmlns="http://www.mulesoft.org/schema/mule/core" 
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" 
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd 
+	http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+	http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd 
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+    <flow name="twitter-api-main">
+        <http:listener config-ref="twitter-api-httpListenerConfig" path="/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body><![CDATA[#[error.description]]]></http:body>
+                <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
+            </http:error-response>
+        </http:listener>
+        <apikit:router config-ref="twitterApiRouter" />
+        <error-handler>
+            <on-error-propagate type="APIKIT:BAD_REQUEST">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Bad request"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">400</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Resource not found"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Method not allowed.  Only GET calls at this time."}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus"><![CDATA[405]]></ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not acceptable"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">406</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Unsupported media type"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">415</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not Implemented"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">501</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
+    <flow name="getHashtagsByKeyword">
+		<ee:transform doc:name="set twitter bearer token to var" doc:id="b4fc374f-e3b5-438e-b5f5-24c06f520752" >
+			<ee:variables>
+				<ee:set-variable variableName="twitter" ><![CDATA[%dw 2.0
+output application/java
+---
+{
+	bearerToken: p('twitter.api.token')
+}]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<http:request method="GET" doc:name="get list of popular tweets by keyword" doc:id="35dfbfc8-ff0f-4802-b74f-478b4de8ab5a" config-ref="twitterApiRequest" path="/search/tweets.json">
+			<reconnect frequency="${request.https.reconnectFrequency}" count="${request.https.reconnectCount}"/>
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer " ++ vars.twitter.bearerToken
+}]]]></http:headers>
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	q : attributes.queryParams.keyword,
+	result_type : "popular",
+	count : vars.twitter.count
+}]]]></http:query-params>
+		</http:request>
+		<ee:transform doc:name="iterate over twitter response for non empty hashtags" doc:id="52a3108d-07d2-45ec-9b78-189eb7dca96a" >
+			<ee:message>
+				<ee:set-payload resource="dwl/set-payload-build-list-of-hashtags-from-twitter-response.dwl" />
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="console - info - list of hashtags (possible dups)" message="#[payload]" category="${log.category}"/>
+		<ee:transform doc:name="set response payload - unique list of hashtags" doc:id="532c04eb-0b70-402c-9aaa-33a400c1bd22" >
+			<ee:message>
+				<ee:set-payload resource="dwl/set-payload-list-of-unique-hashtags-response.dwl" />
+			</ee:message>
+		</ee:transform>
+    </flow>
+    <flow name="getTweetsByKeyword" doc:id="1ac83864-b03b-4434-9d9f-3af3ebfe6975">
+		<ee:transform doc:name="set vars for twitter api call" doc:id="5db90ef2-5ca9-4986-a783-b14f35e6e58c" >
+			<ee:variables>
+				<ee:set-variable variableName="twitter" resource="dwl/set-vars-for-twitter-api.dwl" />
+			</ee:variables>
+		</ee:transform>
+		<flow-ref doc:name="getLastTweet and set to var" name="getLastTweetByKeywordInLastHours" target="lastTweet"/>
+		<choice doc:name="any tweets in the last n hours?" doc:id="4d6d9a89-e7be-4dd5-9da8-fc964ae82995" >
+			<when expression='#[vars.lastTweet != null]'>
+				<http:request method="GET" doc:name="get tweets by keyword and since id" doc:id="f6eb0705-d274-476c-a7e5-8fb641c958f6" config-ref="twitterApiRequest" path="/search/tweets.json">
+			<reconnect frequency="${request.https.reconnectFrequency}" count="${request.https.reconnectCount}" />
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer " ++ vars.twitter.bearerToken
+}]]]></http:headers>
+			<http:query-params><![CDATA[#[output application/java
+---
+{
+	q : attributes.queryParams.keyword,
+	count : vars.twitter.count,
+	since_id : vars.lastTweet.id
+}]]]></http:query-params>
+		</http:request>
+				<logger level="INFO" doc:name="console - info - count of tweets" message='#["number of tweets: " ++ sizeOf(payload.statuses)]' category="${log.category}" />
+				<ee:transform doc:name="set response payload - list of tweets" doc:id="7f71c563-62d5-4375-87d1-d6f7593e8cc9">
+			<ee:message>
+				<ee:set-payload resource="dwl/set-payload-get-tweets-response.dwl" />
+			</ee:message>
+		</ee:transform>
+			</when>
+			<otherwise>
+				<set-payload value='#["No new tweets for keyword " ++ attributes.queryParams.keyword ++ " in the last " ++ attributes.queryParams.num_of_hours ++ " hours"]' doc:name="no new tweets in last n hours" doc:id="f1e215a1-d354-4892-9b21-2837ae3a055a" />
+			</otherwise>
+		</choice>
+    </flow>
+    <flow name="getLastTweetByKeywordInLastHours" doc:id="32185783-6026-47eb-82e1-4f1ddc32acd4">
+		<http:request method="GET" doc:name="get recent tweets by keyword" doc:id="ea3a7b2b-7b84-42b8-a645-2b44b0e9d23b" config-ref="twitterApiRequest" path="/search/tweets.json">
+			<reconnect frequency="${request.https.reconnectFrequency}" count="${request.https.reconnectCount}" />
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer " ++ vars.twitter.bearerToken
+}]]]></http:headers>
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	q : attributes.queryParams.keyword,
+	result_type : "recent",
+	include_entities : "false"
+}]]]></http:query-params>
+		</http:request>
+		<choice doc:name="any tweets?" doc:id="327d2b17-3aba-4446-b504-c185c996004b" >
+			<when expression="#[not isEmpty(payload.statuses)]">
+				<ee:transform doc:name="set last tweet pointer" doc:id="29af4d95-a6a5-41d5-b861-fdd69dcd083b">
+			<ee:message>
+				<ee:set-payload resource="dwl/transform-last-tweet-by-min-id-and-last-n-hours.dwl" />
+			</ee:message>
+		</ee:transform>
+			</when>
+			<otherwise >
+				<set-payload value="#[null]" doc:name="null" doc:id="2684a2bf-51d1-4f6b-8458-da9cf49687cf" />
+			</otherwise>
+		</choice>
+		<logger level="INFO" doc:name="console - info - payload" message="#[payload]" category="${log.category}"/>
+    </flow>
+	<flow name="getHealth">
+		<ee:transform doc:name="set payload - healthy status" doc:id="c156edc5-da9a-4534-a838-26c25e04b076" >
+			<ee:message>
+				<ee:set-payload resource="dwl/set-payload-health-successful-response.dwl" />
+			</ee:message>
+		</ee:transform>
+    </flow>
+</mule>

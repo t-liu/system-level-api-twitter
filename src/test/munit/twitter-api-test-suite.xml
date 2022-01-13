@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:munit="http://www.mulesoft.org/schema/mule/munit"
+	xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+		http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<munit:config name="twitter-api-test-suite.xml" />
+		<munit:before-test name="mockExternalCallsBeforeTests" doc:id="17076062-73a4-4e59-81df-f4444317c2c8" description="set query param attributes and mock external calls">
+		<munit:set-event doc:name="http listener query params" doc:id="7c392a0f-1652-4861-a38b-1ee50c1436e6" >
+			<munit:attributes value='#[{queryParams: {"keyword": "Science37", "num_of_hours": 100}}]' mediaType="application/java" />
+		</munit:set-event>
+	</munit:before-test>
+	
+	<munit:test name="whenGetHealth_NoMock_AssertPayload" description="call get health method and assert payload" tags="unit">
+		<munit:execution>
+			<flow-ref doc:name="getHealth" name="getHealth"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+	<munit:test name="whenGetTweetsByKeyword_MockAndSpyHttpRequest_AssertPayload" description="call get tweets method, mock and spy http request to twitter, assert payload" tags="unit">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api for getting last tweet by keyword in n hours" doc:id="d34666b6-bd96-437e-ab12-0285de1e6ef3" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="http request - twitter api" doc:id="39f846f7-d27d-4f91-a24a-e993dad33829" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get tweets by keyword and since id" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:spy doc:name="http request - twitter api" doc:id="1ea96d39-096d-444f-8921-9b00e8220bc2" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get tweets by keyword and since id" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:before-call>
+					<munit-tools:assert-that doc:name="bearer token var exist" doc:id="65ab452b-c5f8-430d-aa08-07586d8146b5" message="bearer token var should exist and not be null " expression="#[vars.twitter.bearerToken]" is="#[MunitTools::notNullValue()]"/>
+					<munit-tools:assert-that doc:name="twitter count var exist" doc:id="48c15dd1-21fb-4bf7-9cd8-eda03b677ee9" message="twitter count var should exist and not be null " expression="#[vars.twitter.count]" is="#[MunitTools::notNullValue()]" />
+				</munit-tools:before-call>
+				<munit-tools:after-call>
+					<munit-tools:assert-that doc:name="twitter response body is less than or equal to global count var" doc:id="14b90f19-0058-46ac-9de1-5e26545511f7" is="#[MunitTools::lessThanOrEqualTo(vars.twitter.count)]" expression="#[sizeOf(payload.statuses)]" message="size of twitter response should be less than the count var"/>
+				</munit-tools:after-call>
+			</munit-tools:spy>
+		</munit:behavior>
+		<munit:execution>
+			<munit:set-event doc:name="http listener query params" doc:id="800adb1e-ddb2-4bf2-8f88-16706bdd109f" >
+				<munit:attributes value='#[{queryParams: {"keyword": "Science37", "num_of_hours": 100}}]' mediaType="application/java" />
+			</munit:set-event>
+			<flow-ref doc:name="getTweetsByKeyword" name="getTweetsByKeyword"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<munit-tools:assert-that doc:name="payload size is less than or equal to global count var" is="#[MunitTools::lessThanOrEqualTo(vars.twitter.count)]" expression="#[sizeOf(payload)]" message="size of payload should be less than the count var"/>
+		</munit:validation>
+	</munit:test>
+
+	<munit:test name="whenGetTweetsByKeyword_MockHttpRequest_WithLowNumOfHoursQueryParams_AssertPayloadDefaultMessage" tags="unit" ignore="true">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api for getting last tweet by keyword in n hours" doc:id="a401285b-49c9-4b4f-9a58-e1b817f3ece2" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="http request - twitter api" doc:id="8f1e4b75-1109-49af-ad64-277505bf3a4b" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get tweets by keyword and since id" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<munit:set-event doc:name="http listener query params" doc:id="e42a7546-d1ab-4cee-ba52-f8d4c5eca656" >
+				<munit:attributes value='#[{queryParams: {"keyword": "Science37", "num_of_hours": 5}}]' mediaType="application/java" />
+			</munit:set-event>
+			<flow-ref doc:name="getTweetsByKeyword" name="getTweetsByKeyword"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+	<munit:test name="whenGetTweetsByKeyword_MockHttpRequestLastTweetReturnEmpty_AssertPayloadIsDefaultMessage" description="call get tweets method, mock http request to twitter for last tweet, assert payload is default message because no new since_id pointer" tags="unit">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api for getting last tweet by keyword in n hours - return empty" doc:id="ed76f40c-fae9-437c-adb9-25770beb45f0" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response-no-results.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+<!-- 			<munit:set-event doc:name="http listener query params" doc:id="64f81a72-96df-4d2b-9e9e-7a516e4bc61d" > -->
+<!-- 				<munit:attributes value='#[{queryParams: {"keyword": "Avionté", "num_of_hours": 1}}]' mediaType="application/java" /> -->
+<!-- 			</munit:set-event> -->
+			<flow-ref doc:name="getTweetsByKeyword" name="getTweetsByKeyword"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<munit-tools:assert-that doc:name="payload is no new tweet message" is='#[MunitTools::startsWith("No new tweet")]' expression="#[payload]" message="payload should be default no new tweet message"/>
+		</munit:validation>
+	</munit:test>
+	
+	<munit:test name="whenGetHashtagsByKeyword_MockAndSpyHttpRequest_AssertPayload" description="call get hashtags method, mock and spy http request to twitter, assert payload" tags="unit">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api" doc:id="c7ab095e-6760-4ebe-b679-fad766ba088e" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get list of popular tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:spy doc:name="http request - twitter api" doc:id="28efc60e-3326-47bb-a1f4-795aeca09d0e" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get list of popular hashtags" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:before-call>
+					<munit-tools:assert-that doc:name="bearer token var exist" doc:id="c4078606-26cc-4e42-9a7c-43a9aa1db650" message="bearer token var should exist and not be null " expression="#[vars.twitter.bearerToken]" is="#[MunitTools::notNullValue()]"/>
+					<munit-tools:assert-that doc:name="twitter count var exist" doc:id="a16f1edf-9607-49ef-b148-0a6a616360d3" message="twitter count var should exist and not be null " expression="#[vars.twitter.count]" is="#[MunitTools::notNullValue()]" />
+				</munit-tools:before-call>
+				<munit-tools:after-call>
+					<munit-tools:assert-that doc:name="twitter response body is less than or equal to global count var" doc:id="bda0de7c-3e9c-4ac2-bb3a-664bc435113a" is="#[MunitTools::lessThanOrEqualTo(vars.twitter.count)]" expression="#[sizeOf(payload.statuses)]" message="size of twitter response should be less than the count var"/>
+				</munit-tools:after-call>
+			</munit-tools:spy>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="getHashtagsByKeyword" name="getHashtagsByKeyword"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+	<munit:test name="whenGetLastTweetByKeywordAndNumOfHours_MockHttpRequest_AssertPayload" description="call get last tweet method, mock http request, and assert payload" tags="unit">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api for getting last tweet by keyword in n hours" doc:id="a8bcc607-8708-4920-ac3d-1d33fb8ed324" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<ee:transform doc:name="set vars for twitter api call" doc:id="9b3ed691-613a-4ea1-97eb-926dac020335" >
+			<ee:variables>
+				<ee:set-variable variableName="twitter" resource="dwl/set-vars-for-twitter-api.dwl" />
+			</ee:variables>
+		</ee:transform>
+			<flow-ref doc:name="getLastTweetByKeywordInLastHours" name="getLastTweetByKeywordInLastHours" doc:id="8200986b-6854-440b-be5c-17bc13d3795a"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+	<munit:test name="whenGetLastTweetByKeywordAndNumOfHours_MockHttpRequestReturnEmpty_AssertNullPayload" description="call get last tweet method, mock http request, return empty, and assert null payload" tags="unit">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api for getting last tweet by keyword in n hours - return empty" doc:id="7934594b-0f90-42b7-acb6-9f4aa83b69a5" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return>
+					<munit-tools:payload value="#[readUrl('classpath://examples/get-twitter-api-call-response-no-results.json','application/json')]" mediaType="application/java" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<ee:transform doc:name="set vars for twitter api call" doc:id="a7212b45-a3e1-42d1-9bbd-4fd38214f78c" >
+			<ee:variables>
+				<ee:set-variable variableName="twitter" resource="dwl/set-vars-for-twitter-api.dwl" />
+			</ee:variables>
+		</ee:transform>
+			<flow-ref doc:name="getLastTweetByKeywordInLastHours" name="getLastTweetByKeywordInLastHours" doc:id="b1e67285-9bef-48dc-a87c-9a4a7163f56a"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is null" message="payload should be null" expression="#[payload]" is="#[MunitTools::nullValue()]"/>
+		</munit:validation>
+	</munit:test>
+</mule>

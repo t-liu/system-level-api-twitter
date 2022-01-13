@@ -1,0 +1,10 @@
+twitter:
+  api:
+    host: "api.twitter.com"
+    basepath: "1.1"
+    maxListings: "10"
+    token: ""
+
+api:
+  autodiscovery:
+    id: ""

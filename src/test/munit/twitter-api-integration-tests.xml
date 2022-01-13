@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:munit="http://www.mulesoft.org/schema/mule/munit"
+	xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+		http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<munit:config name="twitter-api-integration-tests.xml" />
+		<munit:before-test name="mockExternalCallsBeforeIntegrationTests" doc:id="17076062-73a4-4e59-81df-f4444317c2c8" description="set query param attributes and mock external calls">
+		<munit:set-event doc:name="http listener query params" doc:id="7c392a0f-1652-4861-a38b-1ee50c1436e6" >
+			<munit:attributes value='#[{queryParams: {"keyword": "JonGray", "num_of_hours": 5}}]' mediaType="application/java" />
+		</munit:set-event>
+	</munit:before-test>
+	
+	<munit:test name="whenGetTweetsByKeywordAndNumOfHours_AssertPayload" description="call get tweets method, no mocks or spies, assert payload" tags="integration">
+		<munit:execution>
+			<flow-ref doc:name="getTweetsByKeyword" name="getTweetsByKeyword"/>
+			<logger level="INFO" doc:name="console - info - payload" message="#[payload]" category="${log.category}"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<munit-tools:verify-call doc:name="get last tweet called once" doc:id="d822eb47-f39e-4f64-b01c-004030f1f407" processor="http:request" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="get recent tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+		</munit:validation>
+	</munit:test>
+
+	<munit:test name="whenGetHashtagsByKeyword_AssertPayload" description="call get hashtags method, no mocks or spies, assert payload" tags="integration">
+		<munit:execution>
+			<flow-ref doc:name="getHashtagsByKeyword" name="getHashtagsByKeyword"/>
+			<logger level="INFO" doc:name="console - info - payload" message="#[payload]" category="${log.category}"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="payload is not null" message="payload should not be null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+</mule>

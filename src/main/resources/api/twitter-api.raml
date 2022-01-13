@@ -1,0 +1,46 @@
+#%RAML 1.0
+title: Twitter API
+version: v1
+protocols: HTTP
+baseUri: thomas.liu.us-e2.cloudhub.com/{version}
+mediaType: application/json
+
+resourceTypes: !include resourceType.raml
+
+types:  
+  tweets: !include schema/tweets.raml
+  hashtags: !include schema/hashtags.raml
+
+/tweets:
+  type: list
+  description: Retrieve a listing of tweets, require keyword and last n hours parameters.
+  get:
+    queryParameters:
+      keyword:
+        description: Search query.  This is a plain text search for all tweets that matches the query parameter.
+        required: true
+        type: string
+      num_of_hours:
+       description: Last number of hours.  This is a numeric field for all tweets in the last n hours.
+       required: true
+       type: integer
+              
+/hashtags:
+  type: list
+  description: Retrieve a list of unique hashtags used in top ten popular tweets, require keyword
+  get:
+    queryParameters:
+      keyword:
+        description: Search query.  This is a plain text search for all tweets that matches the query parameter.
+        required: true
+        type: string
+
+/health:
+  get:
+    description: Respond to liveness check, to ensure API is reachable
+    responses:
+      200:
+        body:
+          application/json:
+            type: string
+            example: "Hello, How Are You?"            

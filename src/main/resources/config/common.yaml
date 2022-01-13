@@ -1,0 +1,13 @@
+listener:
+  http:
+    port: "8081"
+    timeout: "10000"
+    
+request:
+  https:
+   responseTimeout: "10000"
+   reconnectFrequency: "3000"
+   reconnectCount: "5"
+  
+log:
+  category: "com.mycompany.organization.project"

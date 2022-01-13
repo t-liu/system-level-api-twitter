@@ -1,0 +1,23 @@
+type:
+  array
+items:
+  type:
+    object
+  properties:
+    text:
+      description: Text of the tweet.
+      type: string
+      required: true
+      example: To meet the patient where they are - It's a long-standing concept in the field of medicine, writes Tom.
+    url:
+      description: The url (shortened link) of the tweet.
+      type: string
+      required: true
+      example: https://t.co/AaBbCcDd1234Test
+    author:
+      description: The screen name of the author of tweet.
+      type: string
+      required: true
+      example: tliu301
+examples:
+  value: !include ../examples/getTweets.raml

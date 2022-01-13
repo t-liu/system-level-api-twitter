@@ -1,0 +1,7 @@
+list:
+  get:
+#    is: [ paged ]
+    responses:
+      200:
+        body:
+          type: <<resourcePathName | !pluralize>>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:munit="http://www.mulesoft.org/schema/mule/munit"
+	xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+		http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<munit:config name="twitter-api-exception-suite.xml" />
+	
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithNotFound_ExpectError" description="call main flow, throw apikit not found, expect error" tags="unit" expectedErrorType="APIKIT:NOT_FOUND">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw not found" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:NOT_FOUND" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithBadRequest_ExpectError" description="call main flow, throw apikit bad request, expect error" tags="unit" expectedErrorType="APIKIT:BAD_REQUEST">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw bad request" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:BAD_REQUEST" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithMethodNotAllowed_ExpectError" description="call main flow, throw apikit method not allowed, expect error" tags="unit" expectedErrorType="APIKIT:METHOD_NOT_ALLOWED">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw method not allowed" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:METHOD_NOT_ALLOWED" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithNotAcceptable_ExpectError" description="call main flow, throw apikit not acceptable, expect error" tags="unit" expectedErrorType="APIKIT:NOT_ACCEPTABLE">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw not acceptable" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:NOT_ACCEPTABLE" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithNotImplemented_ExpectError" description="call main flow, throw apikit not implemented, expect error" tags="unit" expectedErrorType="APIKIT:NOT_IMPLEMENTED">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw not implemented" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:NOT_IMPLEMENTED" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="whenCallMainFlow_MockApikitRouter_WithUnsupportedMedia_ExpectError" description="call main flow, throw apikit unsupported media type, expect error" tags="unit" expectedErrorType="APIKIT:UNSUPPORTED_MEDIA_TYPE">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="apikit router - throw unsupported media type" processor="apikit:router">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="twitterApiRouter" attributeName="config-ref" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="APIKIT:UNSUPPORTED_MEDIA_TYPE" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="twitter-api-main" name="twitter-api-main"/>
+		</munit:execution>
+	</munit:test>
+	
+	<munit:test name="whenGetHashtags_MockHttpRequest_ReturnError_Assert" description="call get max tweet, return error, and assert payload" tags="unit" expectedErrorType="HTTP:NOT_FOUND">
+		<munit:behavior>
+			<munit-tools:mock-when doc:name="http request - twitter api - return error" processor="http:request">
+				<munit-tools:with-attributes>
+					<munit-tools:with-attribute whereValue="get list of popular tweets by keyword" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="HTTP:NOT_FOUND" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="getHashtagsByKeyword" name="getHashtagsByKeyword"/>
+		</munit:execution>
+	</munit:test>
+</mule>
