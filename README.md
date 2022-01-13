@@ -15,4 +15,5 @@ This is a project developed in Mulesoft Anypoint Platform to fetch the latest tw
     * YAML
 
 ## Contributing
-Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog ヽ(•‿•)ノ
+Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog.
+ヽ(•‿•)ノ
