@@ -4,9 +4,10 @@ This is a project developed in Mulesoft Anypoint Platform to fetch the latest tw
 
 To deploy this code to a runtime environment supported by Mulesoft, you must provide the following runtime properties:
 * api.autodiscovery.id
-    * this property is used to discovery the api id in API Manager
+    * this property is used to discover the api id in API Manager
 * twitter.api.token
     * this property is used to authenticate to Twitter API 1.1
+    * value for this property will be masked on runtime due to secure property setting in mule-artifact.json file
 
 ### Technologies, languages, and platform used to build this project
 * Application:
