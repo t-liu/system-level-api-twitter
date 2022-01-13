@@ -133,12 +133,7 @@ output application/java
 				<ee:set-payload resource="dwl/set-payload-build-list-of-hashtags-from-twitter-response.dwl" />
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="console - info - list of hashtags (possible dups)" message="#[payload]" category="${log.category}"/>
-		<ee:transform doc:name="set response payload - unique list of hashtags" doc:id="532c04eb-0b70-402c-9aaa-33a400c1bd22" >
-			<ee:message>
-				<ee:set-payload resource="dwl/set-payload-list-of-unique-hashtags-response.dwl" />
-			</ee:message>
-		</ee:transform>
+		<logger level="INFO" doc:name="console - info - list of unique hashtags" message="#[payload]" category="${log.category}"/>
     </flow>
     <flow name="getTweetsByKeyword" doc:id="1ac83864-b03b-4434-9d9f-3af3ebfe6975">
 		<ee:transform doc:name="set vars for twitter api call" doc:id="5db90ef2-5ca9-4986-a783-b14f35e6e58c" >
