@@ -2,6 +2,12 @@
 
 This is a project developed in Mulesoft Anypoint Platform to fetch the latest tweets and list of hashtags for a given keyword and last n hours from Twitter's API. This project was part of a coding challenge for an interview process with Science 37.
 
+To deploy this code to a runtime environment supported by Mulesoft, you must provide the following runtime properties:
+* api.autodiscovery.id
+    * this property is used to discovery the api id in API Manager
+* twitter.api.token
+    * this property is used to authenticate to Twitter API 1.1
+
 ### Technologies, languages, and platform used to build this project
 * Application:
     * RAML for API Design
@@ -15,4 +21,4 @@ This is a project developed in Mulesoft Anypoint Platform to fetch the latest tw
     * YAML
 
 ## Contributing
-Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog.\ ◎[▪‿▪]◎
+Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog.<br/> ◎[▪‿▪]◎
