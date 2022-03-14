@@ -1,6 +1,6 @@
 # Mulesoft - System Level API - Twitter 
 
-This is a project developed in Mulesoft Anypoint Platform to fetch the latest tweets and list of hashtags for a given keyword and last n hours from Twitter's API. This project was part of a coding challenge for an interview process with Science 37.
+This is a project developed in Mulesoft Anypoint Platform to fetch the latest tweets and list of hashtags for a given keyword and last n hours from Twitter's API. This project was part of a coding challenge for an interview process with an emerging life science company.
 
 To deploy this code to a runtime environment supported by Mulesoft, you must provide the following runtime properties:
 * api.autodiscovery.id
@@ -15,8 +15,10 @@ To deploy this code to a runtime environment supported by Mulesoft, you must pro
     * Anypoint Studio for application development
     * MUnit for unit/integration tests
     * Cloudhub for application deployment
+* Languages
     * XML
     * JSON
+    * Dataweave
 * CI/CD
     * Github
     * YAML
